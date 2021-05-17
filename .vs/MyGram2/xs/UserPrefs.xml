@@ -1,8 +1,8 @@
 ﻿<Properties StartupConfiguration="{6562E118-7B89-432B-82AF-30BB41974DB3}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="MyGram2/wwwroot/lib/jquery/dist/MyGramJQuery.js">
     <Files>
-      <File FileName="MyGram2/Views/Home/Index.cshtml" Line="6" Column="5" />
-      <File FileName="MyGram2/wwwroot/lib/jquery/dist/MyGramJQuery.js" Line="30" Column="1" />
+      <File FileName="MyGram2/Views/Home/Index.cshtml" Line="9" Column="2" />
+      <File FileName="MyGram2/wwwroot/lib/jquery/dist/MyGramJQuery.js" Line="51" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
