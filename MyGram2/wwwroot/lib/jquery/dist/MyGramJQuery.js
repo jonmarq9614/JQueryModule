@@ -32,10 +32,7 @@ var lineBreak4 = $("<br>");
 h1.append(lineBreak4);
 
 function SignUpFunction() {
-    var signUpSpan1 = $("<span></span>").text("User");
-    var signUpSpan2 = $("<span></span>").text("Password");
-    $("div.Divv").append(signUpSpan1);
-    $("div.Divv").append(signUpSpan2);
+    $("#UserForm").show();
 }
 
 $("#SignUpButton").click(function () {
@@ -49,3 +46,38 @@ function LogInFunction() {
 $("#LogInButton").click(function () {
     LogInFunction();
 });
+
+
+var myForm = $("<form></form>").attr("id", "UserForm");
+h1.append(myForm);
+
+var userLabel = $("<label></label>").text("User");
+myForm.append(userLabel);
+
+var userInput = $("<input></input>").attr("id", "UserInput");
+myForm.append(userInput);
+
+var lineBreak5 = $("<br>");
+myForm.append(lineBreak5);
+
+var passwordLabel = $("<label></label>").text("Password");
+myForm.append(passwordLabel);
+
+var passwordInput = $("<input></input>").attr("id", "PasswordInput");
+myForm.append(passwordInput);
+
+var lineBreak6 = $("<br>");
+myForm.append(lineBreak6);
+
+var registerButton = $("<button></button>").attr("id", "RegisterButton").text("Register");
+myForm.append(registerButton);
+
+
+$("#RegisterButton").click(function () {
+    var userInputValue = $("#UserInput").val();
+    var passwordInputValue = $("#PasswordInput").val();
+
+    alert("User is: " + userInputValue + " and the Password is: " + passwordInputValue);
+});
+
+$("#UserForm").hide();
