@@ -23,6 +23,13 @@ namespace MyGram2.Controllers
             return View();
         }
 
+        public IActionResult Register(string UserInput, string PasswordInput)
+        {
+            string result = $"{UserInput} is registerd";
+
+            return Content(result);
+        }
+
         public IActionResult Privacy()
         {
             return View();

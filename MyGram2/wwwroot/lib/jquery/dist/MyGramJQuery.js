@@ -54,7 +54,7 @@ h1.append(myForm);
 var userLabel = $("<label></label>").text("User");
 myForm.append(userLabel);
 
-var userInput = $("<input></input>").attr("id", "UserInput");
+var userInput = $("<input></input>").attr("id", "UserInput").attr("name", "UserInput");
 myForm.append(userInput);
 
 var lineBreak5 = $("<br>");
@@ -63,7 +63,7 @@ myForm.append(lineBreak5);
 var passwordLabel = $("<label></label>").text("Password");
 myForm.append(passwordLabel);
 
-var passwordInput = $("<input></input>").attr("id", "PasswordInput");
+var passwordInput = $("<input></input>").attr("id", "PasswordInput").attr("name", "PasswordInput");
 myForm.append(passwordInput);
 
 var lineBreak6 = $("<br>");
@@ -77,7 +77,25 @@ $("#RegisterButton").click(function () {
     var userInputValue = $("#UserInput").val();
     var passwordInputValue = $("#PasswordInput").val();
 
-    alert("User is: " + userInputValue + " and the Password is: " + passwordInputValue);
+    //alert("User is: " + userInputValue + " and the Password is: " + passwordInputValue
+
+    var result;
+
+    $.when(
+        $.ajax({
+            type: "POST",
+            url: "/Home/Register",
+            async: true,
+            data: {
+                UserInput: userInputValue,
+                PasswordInput: passwordInputValue
+            },
+
+        })).then(function (data) {
+            result = data;
+
+            alert(result);
+        });
 });
 
 $("#UserForm").hide();
