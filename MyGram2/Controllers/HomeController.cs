@@ -30,6 +30,15 @@ namespace MyGram2.Controllers
             return Content(result);
         }
 
+        public JsonResult UserInfo()
+        {
+            User user1 = new User();
+            user1.UserName = "jon";
+            user1.Password = "marq";
+
+            return Json(user1);
+        }
+
         public IActionResult Privacy()
         {
             return View();

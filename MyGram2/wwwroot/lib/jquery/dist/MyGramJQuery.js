@@ -96,6 +96,16 @@ $("#RegisterButton").click(function () {
 
             alert(result);
         });
+    $.when($.ajax({
+        type: "GET",
+        url: "/Home/UserInfo",
+        async: true,
+        datatype: "json"
+    })).then(function (data) {
+        var userString = data.userName + ", " +
+            data.password;
+        alert(userString);
+        });
 });
 
 $("#UserForm").hide();
