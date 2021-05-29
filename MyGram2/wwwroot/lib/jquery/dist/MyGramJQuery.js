@@ -44,7 +44,8 @@ function LogInFunction() {
     $.toast({
         heading: "Success",
         text: "You are logged in",
-        icon: "success"
+        icon: "success",
+        position: "top-left"
     });
 
 }
@@ -80,14 +81,16 @@ myForm.append(registerButton);
 
 
 $("#RegisterButton").click(function () {
-    var userInputValue = $("#UserInput").val();
-    var passwordInputValue = $("#PasswordInput").val();
+   // var userInputValue = $("#UserInput").val();
+    //var passwordInputValue = $("#PasswordInput").val();
 
     //alert("User is: " + userInputValue + " and the Password is: " + passwordInputValue
 
-    var result;
+    $("#dialog").dialog("open");
 
-    $.when(
+    //var result;
+
+    /*$.when(
         $.ajax({
             type: "POST",
             url: "/Home/Register",
@@ -111,7 +114,29 @@ $("#RegisterButton").click(function () {
         var userString = data.userName + ", " +
             data.password;
         alert(userString);
-        });
+    });*/
+
+    
+
+});
+
+$("#dialog").dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+        "Create": function () {
+             $.toast({
+                heading: "Success",
+                text: "You are have registerd",
+                icon: "success",
+                position: "top-left"
+             });
+        }
+        "Cancel": function () {
+            $("#dialog").dialog("close");
+        }
+    }
+
 });
 
 $("#UserForm").hide();
