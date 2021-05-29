@@ -40,7 +40,13 @@ $("#SignUpButton").click(function () {
 });
 
 function LogInFunction() {
-    alert("You have logged in");
+    
+    $.toast({
+        heading: "Success",
+        text: "You are logged in",
+        icon: "success"
+    });
+
 }
 
 $("#LogInButton").click(function () {
