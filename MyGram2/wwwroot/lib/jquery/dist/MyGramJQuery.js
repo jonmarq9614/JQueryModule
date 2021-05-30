@@ -1,5 +1,6 @@
 ﻿
 var h1 = $("#MyDiv");
+var signUpDiv = $("#SignUpDialog");
 
 var span = $("<span></span>").text("My Gram");
 h1.append(span);
@@ -32,8 +33,17 @@ var lineBreak4 = $("<br>");
 h1.append(lineBreak4);
 
 function SignUpFunction() {
-    $("#UserForm").show();
+    $("#SignUpDialog").dialog("open");
 }
+$("#SignUpDialog").dialog({
+    autoOpen: false,
+    modal: true,
+    buttons: {
+        "Cancel": function () {
+            $("#SignUpDialog").dialog("close");
+        }
+    }
+});
 
 $("#SignUpButton").click(function () {
     SignUpFunction();
@@ -56,7 +66,7 @@ $("#LogInButton").click(function () {
 
 
 var myForm = $("<form></form>").attr("id", "UserForm");
-h1.append(myForm);
+signUpDiv.append(myForm);
 
 var userLabel = $("<label></label>").text("User");
 myForm.append(userLabel);
@@ -116,8 +126,6 @@ $("#RegisterButton").click(function () {
         alert(userString);
     });*/
 
-    
-
 });
 
 $("#dialog").dialog({
@@ -131,7 +139,8 @@ $("#dialog").dialog({
                 icon: "success",
                 position: "top-left"
              });
-        }
+        },
+
         "Cancel": function () {
             $("#dialog").dialog("close");
         }
@@ -139,4 +148,3 @@ $("#dialog").dialog({
 
 });
 
-$("#UserForm").hide();
