@@ -14,8 +14,23 @@ h1.append(button2);
 var lineBreak = $("<br>");
 h1.append(lineBreak);
 
-var image = $("<span></span>").text("Image 1 Image 2 Image 3 Image 4 Image 5");
+
+for (var x = 1; x < 21; x++) {
+    var image = $("<span></span>").text("Image" + x);
 h1.append(image);
+}
+
+$.when($.ajax({
+    type: "POST",
+    url: "/Home/ImageProperties",
+    async: true,
+    data: {
+        listName: listName,
+        newImage: newImage
+    },
+})).then(function (data) {
+    alert(data);
+});
 
 var lineBreak2 = $("<br>");
 h1.append(lineBreak2);
