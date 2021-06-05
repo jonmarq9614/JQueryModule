@@ -15,21 +15,39 @@ var lineBreak = $("<br>");
 h1.append(lineBreak);
 
 
-for (var x = 1; x < 21; x++) {
-    var image = $("<span></span>").text("Image" + x);
-h1.append(image);
-}
+var imageContainer = $("<div></div>").attr("id", "ImageDiv").appendTo(h1);
+var table = $("<table></table>").appendTo(imageContainer);
+var tbody = $("<tbody></tbody>").attr("id", "ImageBody").appendTo(table);
+
 
 $.when($.ajax({
-    type: "POST",
     url: "/Home/ImageProperties",
-    async: true,
-    data: {
-        listName: listName,
-        newImage: newImage
-    },
+    method: "GET"
 })).then(function (data) {
-    alert(data);
+    var image = null;
+    var imageDiv = $("#ImageDiv");
+    var tbody = $("#ImageBody");
+    var tr = $("<tr></tr>");
+    var td = null;
+    var counter = 0;
+
+    for (var element in data) {
+        if (counter == 5) {
+            tbody.append(tr);
+            tr = $("<tr></tr>");
+            counter = 0;
+        }
+        image = data[element];
+
+        td = $("<td></td>");
+
+        $("<span></span>").text(image.imageAlt).appendTo(td);
+        tr.append(td);
+
+        counter++;
+    }
+
+
 });
 
 var lineBreak2 = $("<br>");

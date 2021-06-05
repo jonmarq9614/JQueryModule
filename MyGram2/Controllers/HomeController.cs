@@ -45,31 +45,151 @@ namespace MyGram2.Controllers
             return View();
         }
 
-        public bool ImageProperties(string listName, ImageClass newImage)
+        public IActionResult ImageProperties()
         {
-            List<ImageClass> existingClass = null;
+            List<ImageClass> imageList = new List<ImageClass>();
 
-            var exists = imageList.ContainsKey(listName);
-            if (exists)
-            {
-                existingClass = imageList[listName];
-            }
-            else
-            {
-                existingClass = new List<ImageClass>();
+            ImageClass newImage = new ImageClass();
+            newImage.Description = "Description 1";
+            newImage.ImageAlt = "Image 1";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 1;
+            imageList.Add(newImage);
 
-            }
-            List<ImageClass> result = existingClass.Where(ImageClass => ImageClass.ImageId == newImage.ImageId).ToList();
-            bool imageWasCreated = false;
+            newImage = new ImageClass();
+            newImage.Description = "Description 2";
+            newImage.ImageAlt = "Image 2";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 2;
+            imageList.Add(newImage);
 
-            if (result.Count == 0)
-            {
-                existingClass.Add(newImage);
-                imageWasCreated = true;
-                imageList[listName] = existingClass;
-            }
+            newImage = new ImageClass();
+            newImage.Description = "Description 3";
+            newImage.ImageAlt = "Image 3";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 3;
+            imageList.Add(newImage);
 
-            return imageWasCreated;
+            newImage = new ImageClass();
+            newImage.Description = "Description 4";
+            newImage.ImageAlt = "Image 4";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 4;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 5";
+            newImage.ImageAlt = "Image 5";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 5;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 6";
+            newImage.ImageAlt = "Image 6";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 6;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 7";
+            newImage.ImageAlt = "Image 7";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 7;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 8";
+            newImage.ImageAlt = "Image 8";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 8;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 9";
+            newImage.ImageAlt = "Image 9";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 9;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 10";
+            newImage.ImageAlt = "Image 10";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 10;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 11";
+            newImage.ImageAlt = "Image 11";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 11;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 12";
+            newImage.ImageAlt = "Image 12";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 12;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 13";
+            newImage.ImageAlt = "Image 13";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 13;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 14";
+            newImage.ImageAlt = "Image 14";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 14;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 15";
+            newImage.ImageAlt = "Image 15";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 15;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 16";
+            newImage.ImageAlt = "Image 16";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 16;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 17";
+            newImage.ImageAlt = "Image 17";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 17;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 18";
+            newImage.ImageAlt = "Image 18";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 18;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 19";
+            newImage.ImageAlt = "Image 19";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 19;
+            imageList.Add(newImage);
+
+            newImage = new ImageClass();
+            newImage.Description = "Description 20";
+            newImage.ImageAlt = "Image 20";
+            newImage.ImagePath = "Image path";
+            newImage.ImageId = 20;
+            imageList.Add(newImage);
+
+            return Json(imageList);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
