@@ -45,6 +45,11 @@ namespace MyGram2.Controllers
             return View();
         }
 
+        public IActionResult Calendar()
+        {
+            return View();
+        }
+
         public IActionResult ImageProperties()
         {
             List<ImageClass> imageList = new List<ImageClass>();

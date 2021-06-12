@@ -1,30 +1,29 @@
 ﻿<Properties StartupConfiguration="{6562E118-7B89-432B-82AF-30BB41974DB3}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MyGram2/Controllers/HomeController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MyGram2/Views/Home/Calendar.cshtml">
     <Files>
       <File FileName="MyGram2/Models/ImageClass.cs" Line="9" Column="19" />
-      <File FileName="MyGram2/Controllers/HomeController.cs" Line="48" Column="47" />
-      <File FileName="MyGram2/wwwroot/lib/jquery/dist/MyGramJQuery.js" Line="102" Column="26" />
-      <File FileName="MyGram2/Views/Shared/_Layout.cshtml" Line="40" Column="50" />
+      <File FileName="MyGram2/wwwroot/lib/jquery/dist/MyGramJQuery.js" />
+      <File FileName="MyGram2/Views/Shared/_Layout.cshtml" Line="23" Column="56" />
+      <File FileName="MyGram2/Controllers/HomeController.cs" />
+      <File FileName="MyGram2/Views/Home/Calendar.cshtml" Line="7" Column="58" />
+      <File FileName="MyGram2/wwwroot/lib/jquery/dist/Calendar.js" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MyGram2" expanded="True">
             <Node name="MyGram2" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="HomeController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Home" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Calendar.cshtml" selected="True" />
+                </Node>
                 <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="css" expanded="True" />
                 <Node name="lib" expanded="True">
-                  <Node name="jquery" expanded="True">
-                    <Node name="dist" expanded="True" />
-                  </Node>
+                  <Node name="jquery" expanded="True" />
                 </Node>
               </Node>
             </Node>

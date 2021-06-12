@@ -350,3 +350,4 @@
 /Users/jonathanmarquez/Desktop/web 102 class/MyGram2/MyGram2/obj/Debug/netcoreapp3.1/MyGram2.dll
 /Users/jonathanmarquez/Desktop/web 102 class/MyGram2/MyGram2/obj/Debug/netcoreapp3.1/MyGram2.pdb
 /Users/jonathanmarquez/Desktop/web 102 class/MyGram2/MyGram2/obj/Debug/netcoreapp3.1/MyGram2.genruntimeconfig.cache
+/Users/jonathanmarquez/Desktop/web 102 class/MyGram2/MyGram2/obj/Debug/netcoreapp3.1/Razor/Views/Home/Calendar.cshtml.g.cs
