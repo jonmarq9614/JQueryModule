@@ -19,6 +19,20 @@ var imageContainer = $("<div></div>").attr("id", "ImageDiv").appendTo(h1);
 var table = $("<table></table>").appendTo(imageContainer);
 var tbody = $("<tbody></tbody>").attr("id", "ImageBody").appendTo(table);
 
+$("#ImageBody").click(function () {
+    $.when($.ajax({
+        url: "/Home/ImageSaved",
+        method: "POST"
+
+    }))
+}).then ($.toast({
+            heading: "Success",
+            text: "Image was saved"
+}));
+
+
+
+
 
 $.when($.ajax({
     url: "/Home/ImageProperties",

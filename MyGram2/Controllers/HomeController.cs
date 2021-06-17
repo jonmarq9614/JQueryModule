@@ -45,6 +45,14 @@ namespace MyGram2.Controllers
             return View();
         }
 
+        public IActionResult ImageSaved()
+        {
+            ImageSaved saveImage = new ImageSaved();
+            saveImage.SavedImage = "Image has been saved";
+
+            return Json(saveImage);
+        }
+
         public IActionResult Calendar()
         {
             return View();
